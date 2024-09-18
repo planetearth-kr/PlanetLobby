@@ -16,6 +16,7 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
+        e.getPlayer().getInventory().clear();
     }
 
     @EventHandler
@@ -32,5 +33,6 @@ public class PlayerListener implements Listener {
     public void onKill(PlayerDeathEvent e){
         if (e.getPlayer().getKiller() == null)return;
         e.getPlayer().getKiller().addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 5, 1));
+        e.getPlayer().getInventory().clear();
     }
 }
