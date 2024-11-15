@@ -1,5 +1,6 @@
 package kr.planetearth.plugins.planetlobby.listeners;
 
+import kr.planetearth.plugins.planetlobby.PlanetLobby;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,12 +10,23 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class PlayerListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
-        e.getPlayer().getInventory().clear();
+        if (e.getPlayer().hasPlayedBefore()){
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
+            e.getPlayer().getInventory().clear();
+        }
+        else{
+            new BukkitRunnable(){
+                @Override
+                public void run() {
+                    e.getPlayer().performCommand("/server planetearth");
+                }
+            }.runTaskLater(PlanetLobby.getInstance(), 20);
+        }
     }
 
     @EventHandler
