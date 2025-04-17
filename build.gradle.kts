@@ -15,6 +15,7 @@ java {
 repositories {
     mavenCentral()
     mavenLocal()
+    maven("https://repo.viaversion.com")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.purpurmc.org/snapshots")
     maven("https://jitpack.io")
@@ -23,6 +24,7 @@ repositories {
 dependencies {
     //compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     compileOnly("org.purpurmc.purpur:purpur-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("com.viaversion:viaversion-api:5.3.1")
 }
 
 tasks {

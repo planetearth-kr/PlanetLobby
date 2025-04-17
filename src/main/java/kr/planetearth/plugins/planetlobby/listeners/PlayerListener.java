@@ -1,5 +1,7 @@
 package kr.planetearth.plugins.planetlobby.listeners;
 
+import com.viaversion.viaversion.api.Via;
+import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
 import kr.planetearth.plugins.planetlobby.PlanetLobby;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -15,17 +17,13 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class PlayerListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
-        if (e.getPlayer().hasPlayedBefore()){
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
-            e.getPlayer().getInventory().clear();
-        }
-        else{
-            new BukkitRunnable(){
-                @Override
-                public void run() {
-                    e.getPlayer().performCommand("/server planetearth");
-                }
-            }.runTaskLater(PlanetLobby.getInstance(), 20);
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
+        e.getPlayer().getInventory().clear();
+
+        int playerVersion = Via.getAPI().getPlayerVersion(e.getPlayer());
+
+        if (playerVersion > ProtocolVersion.v1_20_3.getVersion()){
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "titlemsg " + e.getPlayer().getName() + " &c&l ⚠ 주의\n&f1.20.1~1.20.4 사이 버전을 사용하실 것을 권장드립니다. -keep:400");
         }
     }
 
