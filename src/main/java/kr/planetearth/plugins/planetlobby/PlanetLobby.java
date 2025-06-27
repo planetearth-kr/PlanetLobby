@@ -16,7 +16,9 @@ public final class PlanetLobby extends JavaPlugin {
         instance = this;
 
         if (!getDataFolder().exists()) {
-            getDataFolder().mkdirs();
+            if (!getDataFolder().mkdirs()) {
+                getLogger().warning("Failed to create plugin data folder: " + getDataFolder().getPath());
+            }
         }
 
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
