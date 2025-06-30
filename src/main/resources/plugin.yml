@@ -1,6 +1,5 @@
 name: PlanetLobby
 version: '${version}'
-description: '${description}'
 main: kr.planetearth.plugins.planetlobby.PlanetLobby
 api-version: '1.20'
 
