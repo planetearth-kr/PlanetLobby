@@ -7,22 +7,9 @@ version = "1.0"
 
 repositories {
     mavenCentral()
-    maven {
-        name = "jitpack"
-        url = uri("https://jitpack.io")
-    }
-    maven {
-        name = "sonatype"
-        url = uri("https://oss.sonatype.org/content/groups/public/")
-    }
-    maven {
-        name = "papermc"
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
-    maven {
-        name = "viaversion"
-        url = uri("https://repo.viaversion.com")
-    }
+    maven("https://jitpack.io")
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://repo.viaversion.com/")
 }
 
 dependencies {
@@ -32,6 +19,10 @@ dependencies {
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
 }
 
 tasks.processResources {
