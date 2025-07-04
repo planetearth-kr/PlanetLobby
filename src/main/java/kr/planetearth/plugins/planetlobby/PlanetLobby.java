@@ -28,9 +28,10 @@ public final class PlanetLobby extends JavaPlugin {
 
     @Override
     public void onDisable() {
+
     }
 
-    public static PlanetLobby getInstance(){
+    public static PlanetLobby getInstance() {
         return instance;
     }
 }
