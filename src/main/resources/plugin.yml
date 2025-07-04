@@ -2,3 +2,4 @@ name: PlanetLobby
 version: '${version}'
 main: kr.planetearth.plugins.planetlobby.PlanetLobby
 api-version: '1.20'
+authors: [ Heiz, Irochi ]
