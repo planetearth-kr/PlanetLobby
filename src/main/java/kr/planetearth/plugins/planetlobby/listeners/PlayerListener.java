@@ -11,6 +11,8 @@ import net.luckperms.api.LuckPermsProvider;
 import net.luckperms.api.node.types.InheritanceNode;
 import net.luckperms.api.node.types.PermissionNode;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,8 +29,10 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        World world = Bukkit.getWorld("world");
+        Location spawn = new Location(world, 866.0, 18.0, 373.5, 90.0f, 0.0f);
 
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + player.getName());
+        player.teleport(spawn);
         player.getInventory().clear();
 
         int playerVersion = Via.getAPI().getPlayerVersion(player.getUniqueId());
