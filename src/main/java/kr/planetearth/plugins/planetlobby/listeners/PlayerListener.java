@@ -80,7 +80,7 @@ public class PlayerListener implements Listener {
     public void onPlayerSwapHandItems(PlayerSwapHandItemsEvent event) {
         Player player = event.getPlayer();
         if (player.isSneaking()) {
-            player.performCommand("bs menu");
+            player.performCommand("shop open ServerSelect");
             event.setCancelled(true);
         }
     }
