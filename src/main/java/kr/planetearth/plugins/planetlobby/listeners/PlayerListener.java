@@ -39,8 +39,8 @@ public class PlayerListener implements Listener {
         if (playerVersion > ProtocolVersion.v1_20_3.getVersion()) {
             Title title = Title.title(
                 Component.text("⚠ 주의").color(NamedTextColor.RED).decorate(TextDecoration.BOLD),
-                Component.text("권장 버전은 1.20.1~1.20.4 입니다.").color(NamedTextColor.WHITE),
-                Title.Times.times(Duration.ofMillis(500), Duration.ofSeconds(15), Duration.ofSeconds(1))
+                Component.text("1.20.1~1.20.4 버전으로 접속을 권장합니다!").color(NamedTextColor.WHITE),
+                Title.Times.times(Duration.ofMillis(500), Duration.ofSeconds(10), Duration.ofSeconds(1))
             );
             player.showTitle(title);
         }
