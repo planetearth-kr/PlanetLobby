@@ -27,7 +27,7 @@ public final class PlanetLobby extends JavaPlugin {
         loadLanguageFiles();
         Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);
 
-        logger.info("PlanetLobby has been disabled.");
+        logger.info("PlanetLobby has been enabled.");
     }
 
     private void loadLanguageFiles() {
