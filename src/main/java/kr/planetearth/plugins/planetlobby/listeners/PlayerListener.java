@@ -1,5 +1,6 @@
 package kr.planetearth.plugins.planetlobby.listeners;
 
+import kr.planetearth.plugins.planetlobby.PlanetLobby;
 import com.viaversion.viaversion.api.Via;
 import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
 import net.kyori.adventure.text.Component;
@@ -25,6 +26,11 @@ import java.time.Duration;
 import java.time.Instant;
 
 public class PlayerListener implements Listener {
+    private final PlanetLobby plugin;
+
+    public PlayerListener(PlanetLobby plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
@@ -37,9 +43,12 @@ public class PlayerListener implements Listener {
 
         int playerVersion = Via.getAPI().getPlayerVersion(player.getUniqueId());
         if (playerVersion > ProtocolVersion.v1_20_3.getVersion()) {
+            Component titleComponent = plugin.getMessage("version_warning_title", player);
+            Component subtitleComponent = plugin.getMessage("version_warning_subtitle", player);
+
             Title title = Title.title(
-                Component.text("⚠ 주의").color(NamedTextColor.RED).decorate(TextDecoration.BOLD),
-                Component.text("1.20.1~1.20.4 버전으로 접속을 권장합니다!").color(NamedTextColor.WHITE),
+                titleComponent,
+                subtitleComponent,
                 Title.Times.times(Duration.ofMillis(500), Duration.ofSeconds(10), Duration.ofSeconds(1))
             );
             player.showTitle(title);
