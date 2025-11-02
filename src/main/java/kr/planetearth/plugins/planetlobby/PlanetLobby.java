@@ -26,6 +26,7 @@ public final class PlanetLobby extends JavaPlugin {
 
         loadLanguageFiles();
         Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new AntiBlockGlitchListener(this), this);
 
         logger.info("PlanetLobby has been enabled.");
     }
