@@ -1,2 +1,10 @@
 version_warning_title: "<red>⚠ 주의"
 version_warning_subtitle: "<white>1.20.1~1.20.4 버전으로 접속을 권장합니다!"
+shift_menu_title: "<grey>서버 선택</grey>"
+menu_1_name: "<#0072FF><bold>P<#0080E8><bold>l<#008ED2><bold>a<#009CBB><bold>n<#00AAA5><bold>e<#00B98E><bold>t<#00C777><bold>E<#00D561><bold>a<#00E34A><bold>r<#00F134><bold>t<#00FF1D><bold>h"
+menu_1_description: 
+  - "<yellow>플래닛어스에 뛰어들기"
+  - ""
+  - "<grey>대기열: %ajqueue_queuedfor_planetearth%명"
+  - ""
+  - "<red>권장 버전: 1.20.1~1.20.4"

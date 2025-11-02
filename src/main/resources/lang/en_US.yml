@@ -1,2 +1,10 @@
 version_warning_title: "<red>⚠ Warning"
-version_warning_subtitle: "<white>We recommend connecting with version 1.20.1~1.20.4!"
+version_warning_subtitle: "<white>We recommend connecting with version 1.20.1-1.20.4!"
+shift_menu_title: "<grey>Server Select</grey>"
+menu_1_name: "<#0072FF><bold>P<#0080E8><bold>l<#008ED2><bold>a<#009CBB><bold>n<#00AAA5><bold>e<#00B98E><bold>t<#00C777><bold>E<#00D561><bold>a<#00E34A><bold>r<#00F134><bold>t<#00FF1D><bold>h"
+menu_1_description:
+  - "<yellow>Jump into PlanetEarth"
+  - ""
+  - "<grey>Queue: %ajqueue_queuedfor_planetearth%"
+  - ""
+  - "<red>Recommend Version: 1.20.1-1.20.4"
