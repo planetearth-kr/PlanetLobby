@@ -48,7 +48,7 @@ public class ShiftMenuListener implements Listener {
 
     StaticPane pane = new StaticPane(0, 0, 9, 1);
 
-    addMenuItem(pane, player, 4, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "ajqueue join planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
+    addMenuItem(pane, player, 4, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "joinqueue planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
 
     gui.addPane(pane);
     gui.show(player);
