@@ -18,6 +18,7 @@ repositories {
     maven("https://jitpack.io")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.viaversion.com/")
+    maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
 
 configurations.all {
@@ -32,6 +33,7 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     compileOnly("com.viaversion:viaversion-api:5.5.1")
     compileOnly("net.luckperms:api:5.5")
+    compileOnly("me.clip:placeholderapi:2.11.6")
     implementation("com.github.stefvanschie.inventoryframework:IF:0.11.5")
 }
 

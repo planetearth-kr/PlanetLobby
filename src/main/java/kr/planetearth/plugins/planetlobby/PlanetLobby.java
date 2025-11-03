@@ -53,20 +53,30 @@ public final class PlanetLobby extends JavaPlugin {
     String langCode = (player != null && player.locale().toString().startsWith("ko")) ? "ko_KR" : "en_US";
     YamlConfiguration config = languageFiles.getOrDefault(langCode, languageFiles.get(DEFAULT_LANG));
     String rawMessage = config.getString(key, "<red>Message not found: " + key + "</red>");
+
+    if (player != null && Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+      rawMessage = me.clip.placeholderapi.PlaceholderAPI.setPlaceholders(player, rawMessage);
+    }
+
     return MINI_MESSAGE.deserialize(rawMessage, resolvers);
   }
 
-  public List < Component > getMessageList(String key, Player player, TagResolver...resolvers) {
+  public List<Component> getMessageList(String key, Player player, TagResolver...resolvers) {
     String langCode = (player != null && player.locale().toString().startsWith("ko")) ? "ko_KR" : "en_US";
     YamlConfiguration config = languageFiles.getOrDefault(langCode, languageFiles.get(DEFAULT_LANG));
 
     if (config.isList(key)) {
-      List < String > rawMessages = config.getStringList(key);
+      List<String> rawMessages = config.getStringList(key);
       if (rawMessages.isEmpty()) {
         return List.of(MINI_MESSAGE.deserialize("<red>Message not found: " + key + "</red>"));
       }
       return rawMessages.stream()
-        .map(line -> MINI_MESSAGE.deserialize(line, resolvers))
+        .map(line -> {
+          if (player != null && Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            line = me.clip.placeholderapi.PlaceholderAPI.setPlaceholders(player, line);
+          }
+          return MINI_MESSAGE.deserialize(line, resolvers);
+        })
         .toList();
     }
 
