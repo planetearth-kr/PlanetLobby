@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.gradleup.shadow") version "9.3.0"
+    id("com.gradleup.shadow") version "9.4.2"
 }
 
 group = providers.gradleProperty("group").get()
@@ -31,10 +31,10 @@ configurations.all {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
-    compileOnly("com.viaversion:viaversion-api:5.6.0")
+    compileOnly("com.viaversion:viaversion-api:5.7.2")
     compileOnly("net.luckperms:api:5.5")
     compileOnly("me.clip:placeholderapi:2.11.6")
-    implementation("com.github.stefvanschie.inventoryframework:IF:0.11.6")
+    implementation("com.github.stefvanschie.inventoryframework:IF:0.12.0")
 }
 
 tasks {
