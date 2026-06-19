@@ -8,3 +8,8 @@ menu_1_description:
   - "<grey>Queue: %ajqueue_queuedfor_planetearth%"
   - ""
   - "<red>Recommend Version: 1.20.1-1.20.4"
+menu_2_name: "<#b9d9fb><bold>KITMAP</bold>"
+menu_2_description:
+  - "<yellow>Meet, and Fight."
+  - ""
+  - "<grey>Queue: %ajqueue_queuedfor_kitmap%"

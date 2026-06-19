@@ -6,6 +6,7 @@ import com.destroystokyo.paper.profile.ProfileProperty;
 import com.github.stefvanschie.inventoryframework.gui.GuiItem;
 import com.github.stefvanschie.inventoryframework.gui.type.ChestGui;
 import com.github.stefvanschie.inventoryframework.pane.StaticPane;
+import com.github.stefvanschie.inventoryframework.pane.util.Slot;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.Bukkit;
@@ -46,11 +47,12 @@ public class ShiftMenuListener implements Listener {
     ChestGui gui = new ChestGui(1, title);
     gui.setOnGlobalClick(event -> event.setCancelled(true));
 
-    StaticPane pane = new StaticPane(0, 0, 9, 1);
+    StaticPane pane = new StaticPane(9, 1);
 
-    addMenuItem(pane, player, 4, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "joinqueue planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
+    addMenuItem(pane, player, 3, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "joinqueue planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
+    addMenuItem(pane, player, 5, Material.PLAYER_HEAD, "menu_2_name", "menu_2_description", "joinqueue kitmap", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM0ZTJkNGJmYmIyMWQ0ZWQ4ODZmZGQ3MmYzNmY5NWMzZGUwZDkyN2NjOTYwNTA5Y2E0YmMyYWE4ZGI5MWExYiIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19");
 
-    gui.addPane(pane);
+    gui.addPane(Slot.fromXY(0, 0), pane);
     gui.show(player);
   }
 

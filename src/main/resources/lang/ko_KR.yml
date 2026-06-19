@@ -8,3 +8,8 @@ menu_1_description:
   - "<grey>대기열: %ajqueue_queuedfor_planetearth%명"
   - ""
   - "<red>권장 버전: 1.20.1~1.20.4"
+menu_2_name: "<#b9d9fb><bold>KITMAP</bold>"
+menu_2_description:
+  - "<yellow>만나고, 싸우고."
+  - ""
+  - "<grey>대기열: %ajqueue_queuedfor_kitmap%명"
