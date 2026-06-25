@@ -13,3 +13,6 @@ menu_2_description:
   - "<yellow>Meet, and Fight."
   - ""
   - "<grey>Queue: %ajqueue_queuedfor_kitmap%"
+menu_3_name: "<#eb4034><bold>OLD LOBBY</bold>"
+menu_3_description:
+  - "<yellow>Warp into Old Lobby"

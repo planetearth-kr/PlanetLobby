@@ -13,3 +13,6 @@ menu_2_description:
   - "<yellow>만나고, 싸우고."
   - ""
   - "<grey>대기열: %ajqueue_queuedfor_kitmap%명"
+menu_3_name: "<#eb4034><bold>OLD LOBBY</bold>"
+menu_3_description:
+  - "<yellow>구 로비로 이동"

@@ -49,8 +49,9 @@ public class ShiftMenuListener implements Listener {
 
     StaticPane pane = new StaticPane(9, 1);
 
-    addMenuItem(pane, player, 3, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "joinqueue planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
-    addMenuItem(pane, player, 5, Material.PLAYER_HEAD, "menu_2_name", "menu_2_description", "joinqueue kitmap", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM0ZTJkNGJmYmIyMWQ0ZWQ4ODZmZGQ3MmYzNmY5NWMzZGUwZDkyN2NjOTYwNTA5Y2E0YmMyYWE4ZGI5MWExYiIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19");
+    addMenuItem(pane, player, 4, Material.PLAYER_HEAD, "menu_1_name", "menu_1_description", "joinqueue planetearth", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=");
+    addMenuItem(pane, player, 6, Material.PLAYER_HEAD, "menu_2_name", "menu_2_description", "joinqueue kitmap", "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM0ZTJkNGJmYmIyMWQ0ZWQ4ODZmZGQ3MmYzNmY5NWMzZGUwZDkyN2NjOTYwNTA5Y2E0YmMyYWE4ZGI5MWExYiIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19");
+    addMenuItem(pane, player, 2, Material.PLAYER_HEAD, "menu_3_name", "menu_3_description", "warp oldlobby " + player.getName(), "customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzAwYTFhN2JiMDdmZGI0ZTZhODZlMzQxODE2ZTg4NDNkZGFmN2NmMzcxM2EzNjY2ZDc0YjcyZjk4NjE5ZjA2MyJ9fX0=");
 
     gui.addPane(Slot.fromXY(0, 0), pane);
     gui.show(player);
